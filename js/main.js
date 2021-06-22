@@ -7,12 +7,12 @@ $(document).ready(function(){
         var finalCurrencyPrice = $('#finalCurrencyPrice').val();
         var myPrice = $('#myPrice').val();
 
-        var cal = (baseCurrencyPrice * myPrice)/finalCurrencyPrice;
+        var cal = ((baseCurrencyPrice * myPrice)/finalCurrencyPrice).toFixed(5);
 
         $( "#result" ).empty();
         $( "#result" ).append( cal + " " );
         $( "#baseCurrencyVal2" ).empty();
-        $( "#baseCurrencyVal2" ).append( baseCurrency );
+        $( "#baseCurrencyVal2" ).append( finalCurrency );
 
     });
 
@@ -20,6 +20,10 @@ $(document).ready(function(){
         var baseCurrency = $('#baseCurrency').val();
         $( "#baseCurrencyVal" ).empty();
         $( "#baseCurrencyVal" ).append( baseCurrency );
+    });
+
+    $.get( "js/main.txt", function( data ) {
+        alert( data );
     });
 
 });
