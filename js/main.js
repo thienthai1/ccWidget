@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
-    $.get( "https://raw.githubusercontent.com/thienthai1/ccWidget/master/js/main.txt", function( data ) {
-        
+    $.get( "./js/main.txt", function( data ) {
+
         $("#ccWidgetContent").append(data);
 
         $('.btnSubmit').click(function() {
@@ -17,6 +17,8 @@ $(document).ready(function(){
             $( "#result" ).append( cal + " " );
             $( "#baseCurrencyVal2" ).empty();
             $( "#baseCurrencyVal2" ).append( finalCurrency );
+
+            $(".ccWidget-Result").css('display','block');
     
         });
     

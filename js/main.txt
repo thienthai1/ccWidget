@@ -37,7 +37,7 @@
                 <div class="col-md-12">
                     <button type="submit" class="btnSubmit btn-default">Submit</button>
                 </div>
-                <div class="col-md-12">
+                <div class="col-md-12 ccWidget-Result" style="display:none;">
                     <span>You will have </span><span id="result"></span><span id="baseCurrencyVal2"></span>
                 </div>
         </div>
